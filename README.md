@@ -3,10 +3,10 @@
 
 ## Board 
 board preview
-![front-back.png](https://github.com/AiDude-io/CorgiDude/blob/master/images/front-back.png?raw=true =700x)
+![front-back.png](https://github.com/AiDude-io/CorgiDude/blob/master/images/front-back.png?raw=true | width=700)
 
 board pinout
-![corgidude-pinout.png](https://github.com/AiDude-io/CorgiDude/blob/master/images/corgidude-pinout.png?raw=true =500x)
+![corgidude-pinout.png](https://github.com/AiDude-io/CorgiDude/blob/master/images/corgidude-pinout.png?raw=true | width=700)
 ## Firmware
 Download : [https://github.com/AiDude-io/CorgiDude/releases](https://github.com/AiDude-io/CorgiDude/releases)
 ## Python IDE
