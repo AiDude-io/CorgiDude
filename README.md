@@ -9,6 +9,8 @@ board pinout
 
 ## Firmware
 Download : [https://github.com/AiDude-io/CorgiDude/releases](https://github.com/AiDude-io/CorgiDude/releases)
+## Driver
+Please search Google for "CH340 driver"
 ## Python IDE
 MaixPy IDE download : [https://dl.sipeed.com/MAIX/MaixPy/ide/_/](https://dl.sipeed.com/MAIX/MaixPy/ide/_/) 
 ## Flash tool
