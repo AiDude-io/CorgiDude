@@ -10,7 +10,7 @@ board pinout
 ## Firmware
 Download : [https://github.com/AiDude-io/CorgiDude/releases](https://github.com/AiDude-io/CorgiDude/releases)
 ## Python IDE
-MaixPy IDE download :  https://dl.sipeed.com/MAIX/MaixPy/ide/_
+MaixPy IDE download : [https://dl.sipeed.com/MAIX/MaixPy/ide/_/](https://dl.sipeed.com/MAIX/MaixPy/ide/_/) 
 ## Flash tool
 KFlash GUI : download : [https://github.com/sipeed/kflash_gui/releases](https://github.com/sipeed/kflash_gui/releases)
 ## Where To Buy
