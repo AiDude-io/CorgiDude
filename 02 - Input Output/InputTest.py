@@ -22,6 +22,6 @@ while(True):
     '''
     if dude.DigitalRead(PORT.INPUT1,4) == 1:
         img.draw_rectangle(0,0,240,240, fill=True, color=(0,0,255))
-    lcd.display(img)
     '''
+    lcd.display(img)
     time.sleep(0.1)
