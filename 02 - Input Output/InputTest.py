@@ -19,8 +19,9 @@ while(True):
     img.draw_string(5,35, "H=%2.2f" % humid,color=(0,255,0),scale=3)
     img.draw_string(5,65, "ADC=%2.2f" % adc,color=(0,255,0),scale=3)
 
+    '''
     if dude.DigitalRead(PORT.INPUT1,4) == 1:
         img.draw_rectangle(0,0,240,240, fill=True, color=(0,0,255))
     lcd.display(img)
-
+    '''
     time.sleep(0.1)
