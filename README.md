@@ -1,4 +1,4 @@
-# Document and resources for CorgiDude 
+﻿# Document and resources for CorgiDude 
 
 ## Board 
 board preview
@@ -15,5 +15,56 @@ Please search Google for "CH340 driver"
 MaixPy IDE download : [https://dl.sipeed.com/MAIX/MaixPy/ide/_/](https://dl.sipeed.com/MAIX/MaixPy/ide/_/) 
 ## Flash tool
 KFlash GUI : download : [https://github.com/sipeed/kflash_gui/releases](https://github.com/sipeed/kflash_gui/releases)
+## GPIOs and Sensors
+All GPIO ports in CorgiDude can be controlled by Dude class
+
+    from Dude import dude, PORT
+    dude.BeginADC(PORT.INPUT1)
+    dude.BeginAHT(PORT.INPUT1)
+    #input
+    adc = dude.AnalogRead(port=PORT.INPUT1,channel=1)
+    temp,humid = dude.ReadAHT(port=PORT.INPUT1)
+    digitalData = dude.DigitalRead(port=PORT.INPUT2,pin=1)
+    #output
+    dude.PWMWrite(port=PORT.OUTPUT1,pin=2,value=50) #value 0-100
+    dude.DigitalWrite(port=PORT.OUTPUT1,pin=2,value=1) #value 0-1
+    dude.Servo(port=PORT.OUTPUT1,pin=3,value=80) #value -90 to 90 angle
+    dude.Motor(port=PORT.OUTPUT2,pin=1,speed=50)#speed -100 to 100
+	dude.LED(r=10,100,50) #onboard led 0-100 %
+**Note :** This class occupied GPIOHS , I2C, and TIMER by this reference
+**GPIO for ADC** 
+	
+
+ - GPIOHS14 - GPIOHS16
+
+**GPIO Input**
+	
+
+ - GPIOHS21 - GPIOHS25
+
+**I2C for INPUT1**
+	
+
+ - I2C1, freq=100000, pin SCL = 15, pin SDA = 14
+
+**I2C for INPUT2**
+
+ - I2C2, freq=100000, pin SCL = 10, pin SDA = 3
+
+**GPIOOutput**
+	
+
+ - GPIOHS17-GPIOHS20
+
+**Timer for PWM**
+	
+
+ - TIMER1, CHANNEL0-3 for OUTPUT1 	
+ - TIMER2, CHANNEL0-3 for OUTPUT2
+
+**Timer for RGB**
+
+ - TIMER0, CHANNEL1-3
+
 ## Where To Buy
 Board : https://www.aiiotshop.com/p/58

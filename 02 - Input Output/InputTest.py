@@ -1,9 +1,6 @@
-# Hello CorgiDude | From AiDude.io, aiiotshop.com/p/58
+# CorgiDude GPIO | From AiDude.io, aiiotshop.com/p/58
 import image, lcd, time
 from Dude import dude,PORT
-from machine import I2C
-from Maix import GPIO
-from fpioa_manager import fm
 
 lcd.init()
 lcd.rotation(1)
