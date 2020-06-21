@@ -66,5 +66,10 @@ All GPIO ports in CorgiDude can be controlled by Dude class
 
  - TIMER0, CHANNEL1-3
 
+## Image Processing References
+
+ - [https://maixpy.sipeed.com/en/libs/machine_vision/image.html](https://maixpy.sipeed.com/en/libs/machine_vision/image.html)
+ - [https://docs.openmv.io/library/omv.image.html](https://docs.openmv.io/library/omv.image.html)
+
 ## Where To Buy
 Board : https://www.aiiotshop.com/p/58
