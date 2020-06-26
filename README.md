@@ -71,5 +71,9 @@ All GPIO ports in CorgiDude can be controlled by Dude class
  - [https://maixpy.sipeed.com/en/libs/machine_vision/image.html](https://maixpy.sipeed.com/en/libs/machine_vision/image.html)
  - [https://docs.openmv.io/library/omv.image.html](https://docs.openmv.io/library/omv.image.html)
 
+# Transfer Learning Garbage Classification with Google Colab
+ - [https://colab.research.google.com/drive/1K4uUOvTLzuHXmsEIBNosj46h_miCPKD0?usp=sharing](https://colab.research.google.com/drive/1K4uUOvTLzuHXmsEIBNosj46h_miCPKD0?usp=sharing)
+
+
 ## Where To Buy
 Board : https://www.aiiotshop.com/p/58
