@@ -74,6 +74,8 @@ All GPIO ports in CorgiDude can be controlled by Dude class
 # Transfer Learning Garbage Classification with Google Colab
  - [https://colab.research.google.com/drive/1K4uUOvTLzuHXmsEIBNosj46h_miCPKD0?usp=sharing](https://colab.research.google.com/drive/1K4uUOvTLzuHXmsEIBNosj46h_miCPKD0?usp=sharing)
 
+# Train MobileNet to classify road object.
+ - [https://colab.research.google.com/drive/1UV08GRbFwW5HZBi_XcM8SwPGJNZlNfar?usp=sharing](https://colab.research.google.com/drive/1UV08GRbFwW5HZBi_XcM8SwPGJNZlNfar?usp=sharing)
 
 ## Where To Buy
 Board : https://www.aiiotshop.com/p/58
