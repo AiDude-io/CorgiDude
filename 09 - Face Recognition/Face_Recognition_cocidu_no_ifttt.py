@@ -17,11 +17,13 @@ from Dude import dude
 sensor.reset()
 sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.QVGA)
-sensor.set_vflip(1)
+sensor.set_vflip(0)
+sensor.set_hmirror(0)
 sensor.run(1)
 
 #=== setup LCD screen ===#
 lcd.init()
+lcd.rotation(2)
 #=== setup LCD ts ===#
 #i2c = I2C(I2C.I2C0, freq=400000, scl=30, sda=31)
 #ts.init(i2c, 1)
@@ -67,6 +69,7 @@ def read_dataset():
     return data,num
 
 def append_dataset(data,numid):
+    global face_dataset
     listx = list(data)
     #use different ways to add items in list
     listx.append(float(numid))
@@ -93,6 +96,7 @@ def append_dataset(data,numid):
     f.close()
     print("save to dataset success")
 def d_dataset(numid):
+    global face_dataset
     lendata = len(face_dataset)
     numdel = -1
     #face_dataset.append(dataxo)
@@ -112,7 +116,7 @@ task_face_detect = kpu.load(0x200000)
 task_face_encode = kpu.load(0x300000)
 kpu.set_outputs(task_face_encode,0,1,1,128)
 anchor = (1.889, 2.5245, 2.9465, 3.94056, 3.99987, 5.3658, 5.155437, 6.92275, 6.718375, 9.01025)
-kpu.init_yolo2(task_face_detect, 0.5, 0.3, 5, anchor)
+kpu.init_yolo2(task_face_detect, 0.5, 0.1, 5, anchor)
 
 #====== config ======#
 face_threshold = 20
@@ -124,6 +128,7 @@ nameIDMAX = 10
 #=== SETUP ===#
 #clear_dataset(dataset_filename,face_dataset)
 face_dataset,numxxs = read_dataset();
+nameID = numxxs
 #corgi85.IFTTT_init("corgi_detect","0hI55mQkUiimG6RIjpWhp")
 print(face_dataset,numxxs)
 #while(True):
@@ -155,7 +160,7 @@ while(True):
             encoded = fmap[:]
             #print(encoded)
             #--- save new face ---#
-            if dude.IsBootPressed() : # User pressed BOOT button
+            if dude.IsBootPressed() : # User pressed BOOT button เพิ่ม ID
                 time.sleep_ms(500)
                 nameID = nameID+1
                 if nameID > nameIDMAX :
@@ -173,7 +178,7 @@ while(True):
                 #if nameID > nameIDMAX :
                     #nameID = 10
 
-            #if status == 2 and x > 200 and x < 230 and y >220 : # User pressed BOOT button
+            #if status == 2 and x > 200 and x < 230 and y >220 : # User pressed BOOT button  ลบ ID
                 #time.sleep_ms(500)
                 #lcd.clear((255,0,0))
                 #d_dataset(nameID)
